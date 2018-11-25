@@ -2,21 +2,22 @@
 ** Program name: Lab 9
 ** Author: Jordan Hamilton
 ** Date: 11/25/2018
-** Description: This program displays a menu asking the user to add an integer to the end of a
-** queue in a new node, display the integer data member of the node at the front of the queue,
-** remove the node at the front of the queue, display the values of all nodes in the queue, or
-** quit the program. A method in the Queue object performs the appropriate action on a
-** circular linked list based on the user's choice.
+** Description: This program displays a menu asking the user to either simulate a buffer or
+** create a palindrome. The buffer simulator asks the user to simulate a number of rounds with
+** different odds of adding or removing integers to a queue that represents a buffer,
+** displaying the average size of the buffer over the course of the simulation and the contents
+** of the buffer. The palindrome creator prompts the user to enter a string, which then is
+** stored into a stack and then added to the string in reverse by popping off characters to form
+** a palindrome of the originally entered string, which is displayed to the user.
 ***********************************************************************************************/
 
 #include <cstdlib>
 #include <iostream>
 #include <memory>
-#include <stack>
-#include <queue>
 
 #include "Menu.hpp"
 #include "queueSim.hpp"
+#include "stackSim.hpp"
 
 using std::cout;
 using std::endl;
@@ -48,7 +49,7 @@ int main() {
       case 1 : simulateQueue();
                break;
 
-      case 2 : cout << "Stack simulation" << endl;
+      case 2 : createPalindrome();
                break;
 
       default : {}
